@@ -1,0 +1,83 @@
+@import "../mixin.scss";
+@import "../variables.scss";
+
+.how-it-works__wrapper {
+  width: 280px;
+
+  @include container;
+}
+
+.how-it-works__title {
+  margin-bottom: 38px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: $main-color;
+}
+
+.how-it-works__list {
+  display: flex;
+  margin-bottom: 42px;
+  flex-direction: column;
+  list-style: none;
+}
+
+.how-it-works__item {
+  position: relative;
+  padding-left: 40px;
+  width: 200px;
+  margin-bottom: 24px;
+}
+
+.how-it-works__item--useful::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: -40px;
+  background-color: $special;
+  background-image: url("../img/icon_leaf.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.how-it-works__item--pour::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: -40px;
+  background-color: $special;
+  background-image: url("../img/icon_tub.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.how-it-works__item--eat::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: -40px;
+  background-color: $special;
+  background-image: url("../img/icon_eat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.how-it-works__item--time::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: -40px;
+  background-color: $special;
+  background-image: url("../img/icon_alarm.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

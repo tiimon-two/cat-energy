@@ -1,0 +1,24 @@
+@import "../variables.scss";
+
+.site-list {
+  list-style: none;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.site-list__item {
+  margin-bottom: 44px;
+}
+
+.site-list__item:last-child {
+  margin-bottom: 22px;
+}
+
+.site-list__item a {
+  text-decoration: none;
+  color: $main-color;
+}

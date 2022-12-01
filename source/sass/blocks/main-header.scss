@@ -1,0 +1,14 @@
+@import "../mixin.scss";
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+
+  @include container;
+}
+
+
+.main-header__logo {
+  display: flex;
+}

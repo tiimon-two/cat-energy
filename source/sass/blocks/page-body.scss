@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.page__body {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $special-dark;
+  background-color: $alternative-color;
+}

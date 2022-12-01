@@ -1,0 +1,16 @@
+.socials__list {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid $border-light;
+  border-bottom: 1px solid $border-light;
+}
+
+.socials__item {
+  position: relative;
+  margin-right: 30px;
+}

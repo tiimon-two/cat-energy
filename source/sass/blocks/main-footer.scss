@@ -1,0 +1,28 @@
+@import "../variables.scss";
+@import "../mixin.scss";
+
+.main-footer__wrapper {
+  width: 280px;
+  background-color: $special-light;
+
+  @include container;
+}
+
+.main-footer__contacts {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 1fr 362px;
+  padding-top: 28px;
+  margin-bottom: 29px;
+}
+
+.main-footer__company-name {
+  padding-left: 76px;
+  margin-bottom: 30px;
+}
+
+.main-footer__copyright {
+  display: flex;
+  padding-bottom: 20px;
+  align-items: center;
+}
