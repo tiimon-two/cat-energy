@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.page-main__wrapper {
+  width: 280px;
+
+  @include container;
+}
+
+.page-main__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: $main-color;
+
+  margin-bottom: 37px;
+}

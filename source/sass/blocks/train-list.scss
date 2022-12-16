@@ -1,0 +1,18 @@
+@import "../variables.scss";
+
+.train-list {
+  list-style: none;
+}
+
+.train-list__item {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $main-color;
+  text-transform: uppercase;
+}

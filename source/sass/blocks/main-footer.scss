@@ -10,13 +10,17 @@
 
 .main-footer__contacts {
   display: grid;
+  width: 280px;
+
+  @include container;
   grid-template-columns: 140px 140px;
   grid-template-rows: 1fr 362px;
   padding-top: 28px;
-  margin-bottom: 29px;
+  background-color: $alternative-color;
 }
 
 .main-footer__company-name {
+  padding-top: 29px;
   padding-left: 76px;
   margin-bottom: 30px;
 }

@@ -1,0 +1,55 @@
+@import "../variables.scss";
+
+.train-choice__text {
+  width: 270px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 39px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $main-color;
+  text-transform: uppercase;
+}
+
+.train-choise__point {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.train-choise__input {
+  height: 45px;
+
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.train-choice__train-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 26px;
+}
+
+.train-choice__texarea {
+  width: 280px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.train-choice__fieldset {
+  margin-bottom: 23px;
+}
+
+.train-choice__button {
+  margin-bottom: 21px;
+}
