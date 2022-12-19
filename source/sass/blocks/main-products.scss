@@ -1,0 +1,79 @@
+@import "../variables.scss";
+@import "../mixin.scss";
+
+.main-products-wrapper {
+  width: 280px;
+
+  @include container;
+}
+
+.main-products__list {
+  display: grid;
+}
+
+.main-products__item {
+  display: grid;
+  width: 280px;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: 1fr 1fr 40px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+}
+
+.main-products__link {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.main-products__title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $main-color;
+}
+
+.main-products__info {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin-bottom: 13px;
+}
+
+.main-products__tocken {
+  display: grid;
+}
+
+.main-products__property {
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  grid-column: 1 / 2;
+
+  text-align: left;
+}
+
+.main-products__value {
+  width: 40px;
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / 3;
+
+  text-align: right;
+}
+
+.main-products__order {
+  grid-column: 1 / -1;
+  grid-row: 3/ 4;
+  text-align: center;
+  text-decoration: none;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

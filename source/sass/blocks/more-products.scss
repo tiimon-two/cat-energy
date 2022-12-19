@@ -1,0 +1,27 @@
+@import "../variables.scss";
+
+.more-products__title,
+.more-products__text {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.more-products__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $main-color;
+}
+
+.more-products__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.more-products__order {
+  padding-top: 10px;
+  background-color: $special-light;
+  color: $special-dark;
+}
