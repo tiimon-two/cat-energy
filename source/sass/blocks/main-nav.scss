@@ -1,3 +1,43 @@
 .main-nav__toggle {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    padding-top: 8px;
+    width: 708px;
+  }
+}
+
+.main-nav__list a {
+  color: $main-color;
+  text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__wrapper {
+    width: 1220px;
+  }
 }

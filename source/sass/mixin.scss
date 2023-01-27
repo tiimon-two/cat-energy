@@ -15,3 +15,11 @@
   margin: 0;
   padding: 0 20px;
 }
+
+@mixin tablet-container {
+  padding: 0 30px;
+}
+
+@mixin desktop-container {
+  padding: 0 110px;
+}

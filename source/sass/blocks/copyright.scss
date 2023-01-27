@@ -7,4 +7,8 @@
   font-size: 16px;
   line-height: 18px;
   vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 22px;
+  }
 }

@@ -2,9 +2,29 @@
 
 .example__wrapper {
   width: 280px;
+  margin: 0;
+  padding: 0 20px;
   background-color: $special-medium;
 
-  @include container;
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+    background: linear-gradient(
+    to bottom,
+    $alternative-color 50%,
+    $special-medium 50% 100%
+  );
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+    background: linear-gradient(
+    to bottom,
+    $alternative-color 20%,
+    $special-medium 20% 100%
+  );
+  }
 }
 
 .example__title {
@@ -61,4 +81,19 @@
   color: $main-color;
   text-align: center;
   text-transform: uppercase;
+}
+
+.example__slider {
+  display: flex;
+}
+
+// .example__slider img {
+//   @media (min-width: width) {
+
+//   }
+// }
+
+.example__toggle {
+  margin: 0;
+  padding: 0;
 }

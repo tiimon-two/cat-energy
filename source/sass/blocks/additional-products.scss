@@ -1,11 +1,30 @@
 @import "../variables.scss";
 @import "../mixin.scss";
 
-// .additional-products__wrapper {
-//   width: 280px;
+.additional-products__wrapper {
+  width: 280px;
 
-//   @include container;
-// }
+  @include container;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+
+    @include tablet-container;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 1220px;
+    display: grid;
+    grid-template-columns: 896px 1fr;
+    grid-template-rows: 36px 1fr;
+
+    @include desktop-container;
+  }
+}
+
+.additional-products {
+  display: flex;
+}
 
 .additional-products__title {
   margin-left: 20px;
@@ -15,15 +34,35 @@
   font-size: 24px;
   line-height: 24px;
   color: $main-color;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 - 1;
+    grid-row: 1 / 2;
+  }
 }
 
 .additional-products__list {
   display: grid;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 }
 
 .additional-products__item {
   display: grid;
   margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .additional-products__link {
@@ -84,4 +123,9 @@
   font-size: 16px;
   line-height: 20px;
   color: $alternative-color;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 }

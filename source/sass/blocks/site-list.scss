@@ -1,7 +1,6 @@
 @import "../variables.scss";
 
 .site-list {
-  list-style: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -12,13 +11,33 @@
 
 .site-list__item {
   margin-bottom: 44px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .site-list__item:last-child {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .site-list__item a {
   text-decoration: none;
+  color: $main-color;
+
+  @media (min-width: $desktop-width) {
+    color: $alternative-color;
+  }
+}
+
+.site-list__item--inner a {
   color: $main-color;
 }

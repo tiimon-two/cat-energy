@@ -4,11 +4,54 @@
   display: flex;
   flex-direction: column;
   width: 280px;
+  margin: 0;
+  padding: 0 20px;
 
-  @include container;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+
+    background: linear-gradient(
+      to right,
+      $alternative-color 50%,
+      $special 50% 100%
+    );
+  }
+}
+
+.main-header--inner {
+  @media (min-width: $desktop-width) {
+    background: none;
+    background-color: $alternative-color;
+  }
 }
 
 
 .main-header__logo {
-  display: flex;
+  height: 34px;
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+    margin-right: 95px;
+  }
+}
+
+.main-header__logo img {
+  @media (min-width: $tablet-width) {
+    src: "img/logo-tablet.svg";
+    height: 52px;
+    width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 540px;
+    height: 59px;
+    width: 202px;
+  }
 }

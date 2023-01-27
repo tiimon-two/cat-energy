@@ -3,9 +3,19 @@
 
 .main-footer__wrapper {
   width: 280px;
+  margin: 0;
+  padding: 0 20px;
   background-color: $special-light;
 
-  @include container;
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
 }
 
 .main-footer__contacts {
@@ -17,16 +27,41 @@
   grid-template-rows: 1fr 362px;
   padding-top: 28px;
   background-color: $alternative-color;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+
+    grid-template-columns: 172px 159px;
+    grid-template-rows: 1fr 400px;
+    column-gap: 295px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .main-footer__company-name {
   padding-top: 29px;
   padding-left: 76px;
   margin-bottom: 30px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .main-footer__copyright {
   display: flex;
   padding-bottom: 20px;
   align-items: center;
+}
+
+.main-footer__socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
 }

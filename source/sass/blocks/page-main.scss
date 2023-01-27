@@ -4,6 +4,18 @@
   width: 280px;
 
   @include container;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+
+    @include tablet-container;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+
+    @include desktop-container;
+  }
 }
 
 .page-main__title {

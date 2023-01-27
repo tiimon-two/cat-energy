@@ -1,5 +1,24 @@
 @import "../variables.scss";
 
+.train-choice {
+  @media (min-width: $desktop-width) {
+    display: grid;
+  }
+}
+
+.train-choice__item {
+  @media (min-width: $desktop-width) {
+    width: 569px;
+  }
+}
+
+.train-choice__profile {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .train-choice__text {
   width: 270px;
   margin: 0;
@@ -12,6 +31,10 @@
   line-height: 18px;
   color: $main-color;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+  }
 }
 
 .train-choise__point {
@@ -31,9 +54,24 @@
 }
 
 .train-choice__train-list {
+  display: grid;
   margin: 0;
   padding: 0;
   margin-bottom: 26px;
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+  }
+}
+
+.train-choice__train-list--additional {
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .train-choice__texarea {
@@ -48,6 +86,10 @@
 
 .train-choice__fieldset {
   margin-bottom: 23px;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 .train-choice__button {

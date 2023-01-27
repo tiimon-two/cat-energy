@@ -3,8 +3,18 @@
 
 .how-it-works__wrapper {
   width: 280px;
+  margin: 0;
+  padding: 0 20px;
 
-  @include container;
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
 }
 
 .how-it-works__title {
@@ -21,6 +31,11 @@
   margin-bottom: 42px;
   flex-direction: column;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .how-it-works__item {
@@ -28,6 +43,16 @@
   padding-left: 40px;
   width: 200px;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+
+    padding-right: 29px;
+    padding-bottom: 57px;
+    padding-top: 151px;
+    padding-left: 30px;
+  }
 }
 
 .how-it-works__item--useful::before {
