@@ -6,13 +6,13 @@
   @include container;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
-
-    @include tablet-container;
+    width: 630px;
+    padding-left: 71px;
+    padding-right: 67px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
+    width: 1220px;
 
     @include desktop-container;
   }
@@ -26,10 +26,31 @@
   color: $main-color;
 
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 //Заголовок вне контейнера центровщика
 .page-main__title--outer {
   padding: 0 20px;
   margin-bottom: 41px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 164px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

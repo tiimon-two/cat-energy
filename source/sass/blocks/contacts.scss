@@ -1,38 +1,68 @@
 @import "../variables.scss";
 
+.contacts {
+  background-color: $alternative-color;
+}
+
 .contacts__title {
+  width: 140px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 18px;
   color: $main-color;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    padding-left: 71px;
+    width: 171px;
+    font-size: 20px;
+    line-height: 21px;
   }
 }
 
 .contacts__text {
+  width: 140px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   margin: 0;
   padding: 0;
   padding-bottom: 28px;
+  font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 159px;
+    font-size: 16px;
+    text-align: right;
+    padding-bottom: 0;
+  }
 }
 
 .contacts__map {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
   margin: 0;
   padding: 0;
-  margin-left: -20px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    height: 400px;
+    height: 396px;
 
     padding: 0;
     margin: 0;
+    margin-top: 58px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
+    margin-top: 0;
+  }
+}
+
+.contacts__map--inner {
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
   }
 }

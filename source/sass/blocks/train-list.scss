@@ -5,9 +5,7 @@
 }
 
 .train-list__item {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 12px;
+  margin-left: 45px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -15,4 +13,16 @@
   line-height: 18px;
   color: $main-color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 88px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.train-list__label--checkbox {
+  @media (min-width: $desktop-width) {
+    margin-right: 160px;
+  }
 }

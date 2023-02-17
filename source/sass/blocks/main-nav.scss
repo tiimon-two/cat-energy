@@ -1,43 +1,102 @@
+.main-nav {
+  position: relative;
+  // width: 320px;
+}
+
+.main-nav__wrapper {
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 110px;
+    width: 500px;
+  }
+}
+
 .main-nav__toggle {
-  margin-bottom: 22px;
+  position: absolute;
+  top: -45px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 38px;
+  background-color: $alternative-color;
+  cursor: pointer;
+  border: none;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 17px;
+  width: 24px;
+  height: 1px;
+  background-color: $main-color;
+  box-shadow: 0 8px 0 0 $main-color, 0 16px 0 0 $main-color;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 18px;
+    width: 24px;
+    height: 1px;
+    background-color: $main-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
 .main-nav__list {
+  width: 320px;
   margin: 0;
   padding: 0;
   list-style: none;
+  z-index: 3;
+}
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    padding-top: 8px;
-    width: 708px;
+@media (max-width: $mobile-width-only) {
+.main-nav--closed .site-list__item {
+  display: none;
+  }
+
+  .main-nav__list a {
+    border-bottom: 1px solid $special-gray;
+  }
+
+  .main-nav__list .site-list__item:first-child a {
+    border-top: 1px solid $special-gray;
   }
 }
 
 .main-nav__list a {
-  color: $main-color;
-  text-decoration: none;
-}
-
-@media (min-width: $tablet-width) {
-  .main-nav__wrapper {
-    display: flex;
-    width: 708px;
-    margin: 0 auto;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-nav__wrapper {
-    width: 1220px;
-  }
+  position: relative;
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }

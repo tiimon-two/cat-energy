@@ -9,10 +9,10 @@
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo">
-        <img src="img/logo-union.svg" width="198" height="38" alt="Cat Energy">
+        <img src="img/logo-union.svg" width="191" height="38" alt="Cat Energy">
         <!-- <span class="main-header__company-name company-name"><b>Cat</b> Energy</span> -->
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
@@ -39,7 +39,7 @@
       <h1 class="visually-hidden">Главная страница Cat Energy</h1>
       <section class="programs">
         <header class="programs__header">
-          <h2 class="programs__main-title">Функциональное питание для котов</h2>
+          <h2 class="programs__main-title">Функциональное <br> питание для котов</h2>
           <p class="programs__slogan">Занялся собой? Займись котом!</p>
           <img class="programs_image" src="img/index-can-1.png" width="280" height="270" alt="Образец питания для кота">
           <a class="programs__link button" href="#">Подобрать программу</a>
@@ -82,44 +82,60 @@
       </section>
       <section class="example">
         <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
-            обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__number">
-                5 кг
-              </dt>
-              <dd class="example__description">
-                снижение<br> веса
-              </dd>
+          <div class="example__main">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
+              обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+            <div class="example__stat">
+              <dl class="example__list">
+                <div class="example__item">
+                  <dt class="example__number">
+                    5 кг
+                  </dt>
+                  <dd class="example__description">
+                    снижение<br> веса
+                  </dd>
+                </div>
+                <div class="example__item">
+                  <dt class="example__number">
+                    60 дней
+                  </dt>
+                  <dd class="example__description">
+                    затрачено<br> времени
+                  </dd>
+                </div>
+              </dl>
+              <p class="example__legend">
+                Затраты на питание: <span>15 000 руб.</span>
+              </p>
             </div>
-            <div class="example__item">
-              <dt class="example__number">
-                60 дней
-              </dt>
-              <dd class="example__description">
-                Затрачено<br> времени
-              </dd>
+          </div>
+          <div class="example__slider-container">
+            <!-- <img class="example__img" src="img/before.png" width="311" height="232" alt="Кот до/после"> -->
+            <div class="example__slider slider">
+              <p class="example__slider-legend example__slider-legend--min">Было</p>
+              <div class="slider__controls">
+                <div class="slider__scale">
+                  <div class="slider__bar" style="width: 50%;">
+                  </div>
+                </div>
+                <div class="slider__toggle" tabindex="0" style="
+                    left: 50%
+                  "></div>
+              </div>
+              <p class="example__slider-legend example__slider-legend--max">Стало</p>
             </div>
-          </dl>
-          <p class="example__legend">
-            Затраты на питание: 15 000 руб.
-          </p>
-          <div class="example__slider slider">
-            <img src="img/before.png" width="311" height="232" alt="Кот до/после">
-            <p class="slider__toggle slider__toggle--min example__toggle">Было</p>
-            <input type="range" id="example" name="example__slider" min="0" max="10">
-            <p class="slider__toggle slider__toggle--max example__toggle">Стало</p>
           </div>
         </div>
       </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="main-footer__info">
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__text">ул. Большая<br> Конюшенная, д. 19/8<br><br> Санкт-Петербург</p>
+        </div>
         <img  class="contacts__map" src="img/location.png" width="320" height="362"
         alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург ">
       </div>
@@ -169,5 +185,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

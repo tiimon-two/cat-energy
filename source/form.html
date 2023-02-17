@@ -9,10 +9,10 @@
   <body class="page__body">
     <header class="main-header main-header--inner">
       <a class="main-header__logo">
-        <img src="img/logo-union.svg" width="198" height="38" alt="Cat Energy">
+        <img src="img/logo-union.svg" width="191" height="38" alt="Cat Energy">
         <!-- <span class="main-header__company-name company-name"><b>Cat</b> Energy</span> -->
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
@@ -38,100 +38,106 @@
     <main class="page-main">
       <div class="page-main__wrapper">
         <h1 class="page-main__title">Подбор программы</h1>
-        <form class="train-choice" action="https://echo.htmlacademy.ru" method="post">
-          <p class="train-choice__text">
+        <form class="train-choise" action="https://echo.htmlacademy.ru" method="post">
+          <p class="train-choise__text">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <div class="train-choice__profile">
-            <div class="profile__contacts">
-              <p class="train-choice__item">
+          <div class="train-choise__profile">
+            <div class="train-choise__contacts">
+              <p class="train-choise__item">
                 <label for="train-choise-name" class="train-choise__point">Имя:*</label>
-                <input class="train-choise__input" type="text" id="train-choise-name" name="name" placeholder="Барсик">
+                <input class="train-choise__input train-choise__input-name"
+                 type="text" id="train-choise-name" name="name" placeholder="Барсик">
               </p>
-              <p class="train-choice__item">
+              <p class="train-choise__item">
                 <label for="train-choise-weight" class="train-choise__point">Вес (кг):*</label>
-                <input class="train-choise__input" type="text" id="train-choise-weight" name="weight" placeholder="7">
+                <input class="train-choise__input train-choise__input-weight"
+                 type="text" id="train-choise-weight" name="weight" placeholder="7">
               </p>
-              <p class="train-choice__item">
-                <label for="train-choise-age" class="train-choise__point">Возраст (лет):*</label>
-                <input class="train-choise__input" type="text" id="train-choise-age" name="age" placeholder="7">
+              <p class="train-choise__item">
+                <label for="train-choise-age" class="train-choise__point train-choise__point--age">Возраст (лет):</label>
+                <input class="train-choise__input train-choise__input-age"
+                 type="text" id="train-choise-age" name="age" placeholder="7">
               </p>
             </div>
-            <ul class="train-choice__train-list train-list">
+            <ul class="train-choise__train-list train-choise__train-list--main train-list">
               <li class="train-list__item train-list__radio">
                 <input class="train-list__input-radio visually-hidden"
                 type="radio" name="train-type" id="train-loss" value="loss" checked>
-                <label for="train-loss">Похудение</label>
+                <label for="train-loss" class="train-list__label train-list__label--radio">Похудение</label>
               </li>
               <li class="train-list__item train-list__radio">
                 <input class="train-list__input-radio visually-hidden"
                 type="radio" name="train-type" id="train-gain" value="gain">
-                <label for="train-gain">Набор массы</label>
+                <label for="train-gain" class="train-list__label train-list__label--radio">Набор массы</label>
               </li>
               <li class="train-list__item train-list__radio">
                 <input class="train-list__input-radio visually-hidden"
                 type="radio" name="train-type" id="train-advice" value="advice">
-                <label for="train-advice">Не знаю (нужен ваш совет)</label>
+                <label for="train-advice" class="train-list__label train-list__label--radio">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </div>
-          <fieldset class="train-choice__fieldset fieldset">
-            <legend class="fieldset__legend">Контактные данные
+          <fieldset class="train-choise__fieldset fieldset">
+            <legend class="fieldset__legend fieldset__legend--contact">Контактные данные
               (владельца кота)</legend>
-            <p class="train-choice__item">
+            <p class="train-choise__item">
               <label for="train-choise-email" class="train-choise__point">e-mail:*</label>
-              <input class="train-choise__input" type="email" id="train-choise-email" name="email" placeholder="kuklachev@gmail.com">
+              <input class="train-choise__input train-choise__input-email"
+              type="email" id="train-choise-email" name="email" placeholder="kuklachev@gmail.com">
             </p>
-            <p class="train-choice__item">
+            <p class="train-choise__item">
               <label for="train-choise-phone" class="train-choise__point">телефон:*</label>
-              <input class="train-choise__input" type="tel" id="train-choise-phone" name="phone" placeholder="8 (960) 900-60-90">
+              <input class="train-choise__input train-choise__input-phone" type="tel" id="train-choise-phone" name="phone" placeholder="8 (960) 900-60-90">
             </p>
           </fieldset>
-          <fieldset class="train-choice__fieldset fieldset">
-            <legend class="fieldset__legend">Комментарий</legend>
-            <textarea class="train-choice__texarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <fieldset class="train-choise__fieldset fieldset">
+            <legend class="fieldset__legend fieldset__legend--comment">Комментарий</legend>
+            <textarea class="train-choise__texarea" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
-          <fieldset class="train-choice__fieldset fieldset">
-            <legend class="fieldset__legend">Дополнительно</legend>
-            <ul class="train-choice__train-list train-choice__train-list--additional train-list">
-              <li class="train-list__item train-list__checkbox">
+          <fieldset class="train-choise__fieldset fieldset">
+            <legend class="fieldset__legend fieldset__legend--additional">Дополнительно</legend>
+            <ul class="train-choise__train-list train-choise__train-list--additional train-list">
+              <li class="train-list__item train-list__item--additional train-list__checkbox">
                 <input class="train-list__input-checkbox visually-hidden"
                 type="checkbox" name="train-type" id="additional-sugar" value="sugar" checked>
-                <label for="additional-sugar">Сахарозаменитель</label>
+                <label for="additional-sugar" class="train-list__label train-list__label--checkbox">Сахарозаменитель</label>
               </li>
-              <li class="train-list__item train-list__checkbox">
+              <li class="train-list__item train-list__item--additional train-list__checkbox">
                 <input class="train-list__input-checkbox visually-hidden"
                 type="checkbox" name="train-type" id="additional-water" value="water">
-                <label for="additional-water">Питьевая вода</label>
+                <label for="additional-water" class="train-list__label train-list__label--checkbox">Питьевая вода</label>
               </li>
-              <li class="train-list__item train-list__checkbox">
+              <li class="train-list__item train-list__item--additional train-list__checkbox">
                 <input class="train-list__input-checkbox visually-hidden"
                 type="checkbox" name="train-type" id="additional-milk" value="milk">
-                <label for="additional-milk">Молоко</label>
+                <label for="additional-milk" class="train-list__label train-list__label--checkbox">Молоко</label>
               </li>
-              <li class="train-list__item train-list__checkbox">
+              <li class="train-list__item train-list__item--additional train-list__checkbox">
                 <input class="train-list__input-checkbox visually-hidden"
                 type="checkbox" name="train-type" id="additional-vita" value="vita">
-                <label for="additional-vita">Витамины</label>
+                <label for="additional-vita" class="train-list__label train-list__label--checkbox">Витамины</label>
               </li>
             </ul>
           </fieldset>
           <div>
-            <button class="train-choice__button button" type="submit">Отправить заявку</button>
-            <span class="train-choice__legend">* - Обязательные поля</span>
+            <button class="train-choise__button button" type="submit">Отправить заявку</button>
+            <span class="train-choise__legend">* - Обязательные поля</span>
           </div>
         </form>
       </div>
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <img  class="contacts__map" src="img/location.png" width="320" height="362"
+        <div class="main-footer__info main-footer__info--inner">
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__text">ул. Большая<br> Конюшенная, д. 19/8<br><br> Санкт-Петербург</p>
+        </div>
+        <img  class="contacts__map contacts__map--inner" src="img/location.png" width="320" height="362"
         alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург ">
       </div>
       <div class="main-footer__wrapper">
-        <div class="main-footer__socials socials">
+        <div class="main-footer__socials main-footer__socials--inner socials">
           <!-- <span class="main-footer__company-name company-name"><b>Cat</b> Energy</span> -->
           <img class="main-footer__company-name" src="../img/footer-logo.svg" width="128" height="24">
           <ul class="socials__list">
@@ -176,5 +182,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

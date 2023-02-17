@@ -9,10 +9,10 @@
   <body class="page__body">
     <header class="main-header main-header--inner">
       <a class="main-header__logo">
-        <img src="img/logo-union.svg" width="198" height="38" alt="Cat Energy">
+        <img src="img/logo-union.svg" width="191" height="38" alt="Cat Energy">
         <!-- <span class="main-header__company-name company-name"><b>Cat</b> Energy</span> -->
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
@@ -22,12 +22,12 @@
                 </a>
               </li>
               <li class="site-list__item site-list__item--inner site-list__item--active">
-                <a>
+                <a href="catalog.html">
                   Каталог продукции
                 </a>
               </li>
               <li class="site-list__item site-list__item--inner">
-                <a href="form.html">
+                <a>
                   Подбор программы
                 </a>
               </li>
@@ -43,7 +43,7 @@
             <ul class="main-products__list">
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/chicken-500.png" width="68" height="86"
+                  <img class="main-products__img" src="img/chicken-500.png" width="68" height="86"
                   alt="Cat Energy PRO 500 г (курица)">
                 </a>
                 <b class="main-products__title">Cat Energy<br> PRO 500 г</b>
@@ -65,7 +65,7 @@
               </li>
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/chicken-1000.png" width="68" height="86"
+                  <img class="main-products__bg-img" src="img/chicken-1000.png" width="68" height="86"
                 alt="Cat Energy PRO 1000 г (курица)">
                 </a>
                 <b class="main-products__title">Cat Energy<br> PRO 1000 г</b>
@@ -87,7 +87,7 @@
               </li>
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/fish-500.png" width="68" height="86"
+                  <img class="main-products__img" src="img/fish-500.png" width="68" height="86"
                 alt="Cat Energy PRO 500 г (рыба)">
                 </a>
                 <b class="main-products__title">Cat Energy<br> PRO 500 г</b>
@@ -109,7 +109,7 @@
               </li>
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/fish-1000.png" width="68" height="86"
+                  <img class="main-products__bg-img" src="img/fish-1000.png" width="68" height="86"
                 alt="Cat Energy PRO 1000 г (рыба)">
                 </a>
                 <b class="main-products__title">Cat Energy<br> PRO 1000 г</b>
@@ -131,7 +131,7 @@
               </li>
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/buckwheat-500.png" width="68" height="86"
+                  <img class="main-products__img" src="img/buckwheat-500.png" width="68" height="86"
                 alt="Cat Energy PRO 500 г (гречка)">
                 </a>
                 <b class="main-products__title">Cat Energy<br> SLIM 500 г</b>
@@ -153,7 +153,7 @@
               </li>
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/buckwheat-1000.png" width="68" height="86"
+                  <img class="main-products__bg-img" src="img/buckwheat-1000.png" width="68" height="86"
                 alt="Cat Energy PRO 1000 г (гречка)"> </a>
                 <b class="main-products__title">Cat Energy<br> PRO 1000 г</b>
                 <dl class="main-products__info">
@@ -174,7 +174,7 @@
               </li>
               <li class="main-products__item">
                 <a class="main-products__link" href="#">
-                  <img src="img/rice-500.png" width="68" height="86"
+                  <img class="main-products__img" src="img/rice-500.png" width="68" height="86"
                 alt="Cat Energy PRO 500 г (рис)">
                 </a>
                 <b class="main-products__title">Cat Energy<br> SLIM 500 г</b>
@@ -194,10 +194,10 @@
                 </dl>
                 <a class="main-products__order button" href="#">Заказать</a>
               </li>
-              <li class="main-products__item more-products">
-                <p class="more-products__title">Показать ещё 100500 товаров</p>
-                <p class="more-products__text">На самом деле вкусов гораздо больше!</p>
-                <a class="main-products__order more-products__order" href="#">Показать все</a>
+              <li class="main-products__item main-products__item--more">
+                <p class="main-products__title main-products__title--more">Показать ещё <br>100500 товаров</p>
+                <p class="main-products__text">На самом деле вкусов гораздо больше!</p>
+                <a class="main-products__order main-products__order--more  button" href="#">Показать все</a>
               </li>
             </ul>
           </div>
@@ -247,19 +247,21 @@
               <a class="additional-products__order button" href="#">Заказать</a>
             </li>
             </ul>
-            <p class="additional-products__stock">Закажите все и получите чехол для кота в порадок!</p>
+            <p class="additional-products__stock">Закажите все<br> и получите чехол для<br> кота в порадок!</p>
           </div>
         </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <img  class="contacts__map" src="img/location.png" width="320" height="362"
+        <div class="main-footer__info main-footer__info--inner">
+          <b class="contacts__title">Приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__text">ул. Большая<br> Конюшенная, д. 19/8<br><br> Санкт-Петербург</p>
+        </div>
+        <img  class="contacts__map contacts__map--inner" src="img/location.png" width="320" height="362"
         alt="Адрес: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург ">
       </div>
       <div class="main-footer__wrapper">
-        <div class="main-footer__socials socials">
+        <div class="main-footer__socials main-footer__socials--inner socials">
           <!-- <span class="main-footer__company-name company-name"><b>Cat</b> Energy</span> -->
           <img class="main-footer__company-name" src="../img/footer-logo.svg" width="128" height="24">
           <ul class="socials__list">
@@ -304,5 +306,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

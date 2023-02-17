@@ -1,11 +1,66 @@
 @import "../variables.scss";
 
+// .slider {
+//   width: 84px;
+// }
+
+.slider__controls {
+  position: relative;
+  width: 84px;
+  height: 6px;
+  margin-top: 4px;
+  margin-bottom: 39px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  background-color: $alternative-color;
+  border: 1px solid $special-dark-gray;
+  border-radius: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 428px;
+    height: 34px;
+    background-color: inherit;
+    border: none;
+  }
+}
+
+.slider__bar {
+  width: 70%;
+  height: 6px;
+  background: $special;
+  border-radius: 15px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.slider__scale {
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    margin-top: 6px;
+    background: $special-dark-gray;
+    border-radius: 15px;
+  }
+}
+
 .slider__toggle {
-  width: 70px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: $main-color;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 13px solid $alternative-color;
+    background-color: $special;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
 }

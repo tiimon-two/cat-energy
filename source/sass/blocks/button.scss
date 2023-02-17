@@ -1,8 +1,13 @@
 @import "../variables.scss";
 
 .button {
-  width: 192px;
-  padding: 7px 44px;
+  // width: 192px;
+  // padding: 7px 44px;
   background-color: $special;
   color: $alternative-color;
+
+  &:hover {
+    background-color: $special-dark-green;
+    color: rgba(255,255,255, 0.3)
+  }
 }

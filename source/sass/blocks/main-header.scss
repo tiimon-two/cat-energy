@@ -3,20 +3,21 @@
 .main-header {
   display: flex;
   flex-direction: column;
-  width: 280px;
-  margin: 0;
-  padding: 0 20px;
+  width: 320px;
+  position: relative;
+
+  // @include container;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
     width: 708px;
-    padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 0 110px;
-
+    padding-bottom: 42px;
+    // z-index: 3;
     background: linear-gradient(
       to right,
       $alternative-color 50%,
@@ -35,14 +36,37 @@
 
 .main-header__logo {
   height: 34px;
+  text-align: left;
+  padding-left: 21px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     height: 52px;
-    margin-right: 95px;
+    padding-top: 24px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 59px;
+    padding-top: 53px;
+    padding-left: 110px;
+    padding-bottom: 0;
   }
 }
 
 .main-header__logo img {
+  width: 191px;
+  height: 38px;
+
   @media (min-width: $tablet-width) {
     src: "img/logo-tablet.svg";
     height: 52px;
