@@ -2,6 +2,16 @@
 
 .train-list {
   list-style: none;
+
+  @media (min-width: $tablet-width) and (max-width: $before-desktop-width) {
+    :nth-child(even) {
+      margin-right: 0;
+    }
+
+    :nth-child(n + 3) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .train-list__item {
@@ -15,14 +25,24 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-left: 88px;
+    margin-left: 60px;
     font-size: 20px;
     line-height: 30px;
   }
 }
 
+.train-list__item--additional {
+  @media (min-width: $tablet-width) {
+    margin-right: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 60px;
+  }
+}
+
 .train-list__label--checkbox {
   @media (min-width: $desktop-width) {
-    margin-right: 160px;
+    margin-right: 100px;
   }
 }

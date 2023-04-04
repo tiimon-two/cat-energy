@@ -1,5 +1,3 @@
-@import "../variables.scss";
-
 .fieldset {
   border: none;
 }
@@ -35,7 +33,7 @@
 
   @media (min-width: $tablet-width) {
     left: -71px;
-    top: 20px;
+    top: 24px;
     width: 30px;
   }
 
@@ -47,13 +45,13 @@
 
 .fieldset__legend--contact::before {
   @media (min-width: $tablet-width) {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: -185px;
-  background-color: $special;
-  height: 2px;
-  width: 145px;
+    position: absolute;
+    content: "";
+    top: 24px;
+    right: -185px;
+    background-color: $special;
+    height: 2px;
+    width: 145px;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,31 +71,37 @@
 
   @media (min-width: $tablet-width) {
     left: -71px;
-    top: 20px;
+    top: 26px;
     width: 30px;
   }
 
   @media (min-width: $desktop-width) {
     left: -110px;
     width: 70px;
+    top: 22px;
   }
 }
 
 .fieldset__legend--comment::before {
   @media (min-width: $tablet-width) {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: -517px;
-  background-color: $special;
-  height: 2px;
-  width: 478px;
+    position: absolute;
+    content: "";
+    top: 26px;
+    right: -517px;
+    background-color: $special;
+    height: 2px;
+    width: 478px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1108px;
     right: -1148px;
+    top: 22px;
   }
+}
+
+.fieldset__legend--additional {
+  margin-bottom: 54px;
 }
 
 .fieldset__legend--additional::after {
@@ -123,13 +127,13 @@
 
 .fieldset__legend--additional::before {
   @media (min-width: $tablet-width) {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: -486px;
-  background-color: $special;
-  height: 2px;
-  width: 446px;
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: -486px;
+    background-color: $special;
+    height: 2px;
+    width: 446px;
   }
 
   @media (min-width: $desktop-width) {

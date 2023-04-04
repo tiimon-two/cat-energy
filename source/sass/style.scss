@@ -1,4 +1,3 @@
-// Начните писать стили здесь
 @import "variables.scss";
 @import "mixin.scss";
 @import "blocks/page-body.scss";
@@ -26,6 +25,7 @@
   font-family: "Oswald";
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src: local("Oswald"),
     url("../fonts/oswaldregular.woff2"),
     url("../fonts/oswaldregular.woff");
@@ -35,7 +35,21 @@
   font-family: "Oswald";
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
   src: local("Oswald"),
     url("../fonts/oswaldmedium.woff2"),
     url("../fonts/oswaldmedium.woff");
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

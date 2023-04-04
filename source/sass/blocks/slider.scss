@@ -1,9 +1,5 @@
 @import "../variables.scss";
 
-// .slider {
-//   width: 84px;
-// }
-
 .slider__controls {
   position: relative;
   width: 84px;
@@ -52,15 +48,23 @@
   @media (min-width: $tablet-width) {
     display: block;
     position: absolute;
-    top: -2px;
-    left: 0;
+    top: -4px;
+    left: 20px;
     width: 8px;
     height: 8px;
     padding: 0;
     border: 13px solid $alternative-color;
     background-color: $special;
     border-radius: 50%;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
   }
 }

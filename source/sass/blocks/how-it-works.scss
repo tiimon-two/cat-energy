@@ -1,11 +1,10 @@
-@import "../mixin.scss";
 @import "../variables.scss";
 
 .how-it-works__wrapper {
   width: 280px;
   margin: 0;
   padding: 0 20px;
-  padding-bottom: 42px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     width: 708px;
@@ -24,7 +23,10 @@
 }
 
 .how-it-works__title {
-  margin-bottom: 38px;
+  margin: 0;
+  padding: 0;
+  margin-top: -4px;
+  margin-bottom: 41px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -34,6 +36,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 32px;
+    margin-top: 0;
     font-size: 60px;
     line-height: 60px;
   }
@@ -54,9 +57,16 @@
 
 .how-it-works__item {
   position: relative;
-  padding-left: 80px;
+  padding-left: 77px;
   width: 200px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
+  font-family: "Arial", sans-serif;
+
+  @media (max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: 245px;
@@ -76,9 +86,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 230px;
-    margin-right: 94px;
+    width: 250px;
+    margin-right: 73px;
     margin-bottom: 57px;
+
+    br {
+      display: none;
+    }
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -91,7 +105,7 @@
   content: "";
   width: 60px;
   height: 60px;
-  top: 0;
+  top: -2px;
   left: 0;
   background-color: $special;
   background-repeat: no-repeat;

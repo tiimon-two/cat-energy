@@ -1,6 +1,3 @@
-@import "../variables.scss";
-@import "../mixin.scss";
-
 .main-footer {
   position: relative;
 }
@@ -14,51 +11,34 @@
 
   @media (min-width: $tablet-width) {
     width: 728px;
-    padding-top: 55px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1220px;
     padding: 0 110px;
-    padding-top: 57px;
+    padding-top: 10px;
   }
 }
 
 .main-footer__contacts {
   width: 320px;
-  padding-top: 28px;
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: 1fr min-content;
-  // column-gap: 2px;
-
-  @media (max-width: $mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
+  background-color: $special-light;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    // column-gap: 295px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 0;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 570px;
-    // height: 201px;
   }
 }
 
 .main-footer__info {
   display: flex;
   justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  background-color: $alternative-color;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 59px;
+    padding-top: 0;
+    padding-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,12 +49,11 @@
     height: 84px;
     padding-top: 66px;
     padding-bottom: 51px;
-    background-color: $alternative-color;
   }
 }
 
 .main-footer__info--inner {
-  padding-top: 28px;
+  padding-top: 38px;
   background-color: $special-light;
 
   @media (min-width: $tablet-width) {
@@ -91,6 +70,8 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 71px;
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
@@ -99,7 +80,15 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 72px;
+
+    span {
+      line-height: 54px;
+    }
   }
+}
+
+.main-footer__picture {
+  background-color: $special-light;
 }
 
 .main-footer__contacts map {
@@ -115,13 +104,27 @@
 }
 
 .main-footer__company-name {
-  padding-top: 29px;
+  padding-top: 31px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+
+  svg {
+    fill: $black;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 0;
     margin: 0;
+    padding-top: 6px;
+    padding-left: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -144,6 +147,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 55px;
     padding-bottom: 41px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
@@ -153,4 +157,8 @@
 
 .main-footer__socials--inner {
   padding-top: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 56px;
+  }
 }

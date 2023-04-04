@@ -1,6 +1,9 @@
-@import "../variables.scss";
 
 .train-choise {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     margin-bottom: 69px;
@@ -9,12 +12,14 @@
 
 .train-choise__contacts {
   margin-bottom: 46px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    margin-right: 80px;
   }
 }
 
@@ -40,7 +45,42 @@
   }
 }
 
+.train-choise__item--email {
+  position: relative;
+
+  svg {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 13px;
+    top: 18px;
+    right: 14px;
+    stroke: $very-dark;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 60px;
+  }
+}
+
+.train-choise__item--phone {
+  position: relative;
+
+  svg {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 13px;
+    top: 18px;
+    right: 14px;
+    fill: $very-dark;
+    stroke: $very-dark;
+  }
+}
+
 .train-choise__profile {
+  margin-bottom: 48px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 75px;
   }
@@ -73,7 +113,10 @@
 }
 
 .train-choise__point {
-  padding-top: 17px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -82,19 +125,27 @@
   margin-right: 13px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 10px;
+    padding-top: 8px;
     font-size: 20px;
     line-height: 30px;
-    margin-right: 15px;
+    margin-right: 22px;
   }
 }
 
 .train-choise__point--age {
-  margin-right: 13px;
+  margin-right: 6px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 2px;
+    margin-right: 20px;
+  }
 }
 
 .train-choise__input {
+  flex-shrink: 1;
+  flex-grow: 1;
   height: 45px;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-left: 15px;
@@ -104,39 +155,40 @@
   font-weight: 400;
   text-transform: uppercase;
   border: 1px solid $special-light-gray;
-  flex-grow: 1;
+
+  &:hover {
+    border-color: $special-dark-gray;
+  }
+
+  &:focus {
+    border-color: $special-dark;
+  }
+
+  &:invalid {
+    border-color: $red;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
     flex-grow: 1;
-    // padding-top: 10px;
-    // padding-bottom: 10px;
   }
 }
 
-.train-choise__input-email {
-  background-image: url("../img/icon_email.svg");
-  background-position: 90% center;
-  background-repeat: no-repeat;
-
-  @media (min-width: $tablet-width) {
-    background-position: 96% center;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 78px;
-  }
+.train-choise__input-email:focus + .train-choise__email-img {
+  stroke: $special;
 }
 
-.train-choise__input-phone {
-  background-image: url("../img/phone.svg");
-  background-position: 90% center;
-  background-repeat: no-repeat;
+.train-choise__input-email:invalid + .train-choise__email-img {
+  stroke: $red;
+}
 
-  @media (min-width: $tablet-width) {
-    background-position: 96% center;
-  }
+.train-choise__input-phone:focus + .train-choise__phone-img {
+  stroke: $special;
+}
+
+.train-choise__input-phone:invalid + .train-choise__phone-img {
+  stroke: $red;
 }
 
 .train-choise__train-list {
@@ -182,9 +234,14 @@
     padding: 25px 27px;
     border: 1px solid $special-light-gray;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
@@ -197,10 +254,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-
-// .train-list {
-//   margin-bottom: 45px;
-// }
 
 .train-list__item {
   margin-bottom: 12px;
@@ -238,12 +291,31 @@
     border-radius: 50%;
     border: 1px solid $special-dark-gray;
 
+    &:hover {
+      border-color: $medium-gray;
+    }
+
     @media (min-width: $tablet-width) {
-      left: -70px;
+      left: -62px;
       width: 40px;
       height: 40px;
     }
   }
+}
+
+.train-list__input-radio:hover {
+  &::before {
+    border-color: $medium-gray;
+  }
+}
+
+.train-list__input-radio:disabled + .train-list__label--radio::before {
+  border-color: $medium-gray;
+  opacity: 0.3;
+}
+
+.train-list__input-radio:hover + .train-list__label--radio::before {
+  border-color: $medium-gray;
 }
 
 .train-list__input-radio:checked + .train-list__label--radio::after {
@@ -257,17 +329,15 @@
   border-radius: 50%;
 
   @media (min-width: $tablet-width) {
-    left: -36px;
     width: 18px;
     height: 18px;
-    left: -57px;
-    top: 8px;
+    left: -50px;
+    top: 6px;
   }
 }
 
 .train-list__label--checkbox {
   position: relative;
-  // margin-left: 45px;
 
   &::before {
     position: absolute;
@@ -281,9 +351,19 @@
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
-      left: -90px;
-      top: -5px
+      left: -62px;
+      top: -5px;
     }
+  }
+}
+
+.train-list__input-checkbox:disabled + .train-list__label--checkbox {
+  opacity: 0.3;
+}
+
+.train-list__label--checkbox:hover {
+  &::before {
+    border-color: $medium-gray;
   }
 }
 
@@ -297,7 +377,7 @@
   background-image: url("../img/check.svg");
 
   @media (min-width: $tablet-width) {
-    left: -78px;
+    left: -50px;
   }
 }
 
@@ -305,6 +385,7 @@
   width: 265px;
   height: 150px;
   padding-left: 15px;
+  padding-top: 10px;
   border: 1px solid $special-light-gray;
 
   font-family: "Oswald", "Arial", sans-serif;
@@ -315,7 +396,7 @@
 
   @media (min-width: $tablet-width) {
     width: 612px;
-    height: 174px;
+    height: 164px;
     padding-left: 19px;
     font-size: 20px;
     line-height: 30px;
@@ -323,14 +404,14 @@
 
   @media (min-width: $desktop-width) {
     width: 1220px;
-    height: 174px;
+    height: 164px;
   }
 }
 
 .train-choise__fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
@@ -338,7 +419,21 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    margin-bottom: 67px;
+    margin-bottom: 42px;
+  }
+}
+
+.train-choise__fieldset--comment {
+  margin-bottom: 62px;
+}
+
+.train-choise__fieldset--additional {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
   }
 }
 

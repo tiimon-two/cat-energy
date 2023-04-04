@@ -1,14 +1,43 @@
-@import "../variables.scss";
+.copyright {
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+}
 
 .copyright__link {
-  margin-right: 138px;
+  width: 280px;
   text-decoration: none;
   color: $special-dark;
   font-size: 16px;
   line-height: 18px;
   vertical-align: middle;
 
-  @media (min-width: $tablet-width) {
-    margin-right: 22px;
+  &:hover {
+    .copyright__img {
+      fill: $special;
+    }
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+}
+
+.copyright__link span {
+  margin-right: 133px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 15px;
+  }
+}
+
+.copyright__img {
+  vertical-align: middle;
+  fill: $darker-gray;
 }

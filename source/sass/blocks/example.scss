@@ -1,5 +1,3 @@
-@import "../variables.scss";
-
 .example__wrapper {
   width: 280px;
   margin: 0;
@@ -8,14 +6,14 @@
   background-color: $special-medium;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
+    width: 728px;
     margin-bottom: 66px;
 
     @include tablet-container;
     background: linear-gradient(
     to bottom,
-    $alternative-color 70%,
-    $special-medium 70% 100%
+    $alternative-color 56%,
+    $special-medium 56% 100%
   );
   }
 
@@ -23,18 +21,20 @@
     width: 1220px;
     display: flex;
     padding: 0 110px;
-    padding-bottom: 25px;
+    padding-bottom: 0;
     margin-bottom: 0;
     background: linear-gradient(
     to bottom,
-    $alternative-color 20%,
-    $special-medium 20% 100%
+    $alternative-color 25%,
+    $special-medium 25% 100%
   );
   }
 }
 
 .example__title {
-  padding-top: 27px;
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
   margin-bottom: 33px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -43,7 +43,7 @@
   color: $main-color;
 
   @media (min-width: $tablet-width) {
-    padding-top: 43px;
+    padding-top: 8px;
     margin-bottom: 63px;
     font-size: 60px;
     line-height: 60px;
@@ -52,7 +52,7 @@
   @media (min-width: $desktop-width) {
     width: 436px;
     margin-bottom: 146px;
-    padding-top: 69px;
+    padding-top: 58px;
     grid-column: 1 / 2;
   }
 }
@@ -60,18 +60,30 @@
 .example__text {
   margin: 0;
   padding: 0;
+  width: 284px;
   margin-bottom: 25px;
 
+  @media (max-width: $mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    width: 708px;
+    margin-bottom: 40px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     width: 436px;
-    margin-bottom: 69px;
+    margin-bottom: 56px;
     grid-column: 1 / 2;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -85,15 +97,15 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 0;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 
 .example__stat {
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: row;
-    margin-bottom: 59px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $desktop-width) {
@@ -138,7 +150,7 @@
 
 .example__number {
   width: 124px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -154,9 +166,10 @@
 }
 
 .example__description {
-  width: 124px;
+  width: 77px;
   margin: 0;
   padding: 0;
+  padding-left: 22px;
   font-size: 12px;
   line-height: 12px;
 
@@ -164,16 +177,14 @@
     width: 162px;
     font-size: 14px;
     line-height: 14px;
-  }
-
-  @media (min-width: $desktop-width) {
-    br {
-      display: none;
-    }
+    padding-left: 0;
   }
 }
 
 .example__legend {
+  margin: 0;
+  padding: 0;
+  padding-top: 4px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -184,47 +195,66 @@
 
   @media (min-width: $tablet-width) {
     width: 180px;
+    padding-top: 20px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
     text-align: right;
   }
 
   @media (min-width: $desktop-width) {
     width: 436px;
     text-align: left;
-  }
-}
+    padding-top: 0;
 
-.example span {
-  padding-left: 63px;
+    span {
+      padding-left: 58px;
+    }
+  }
 }
 
 .example__slider-container {
   position: relative;
   display: flex;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-rows: 1fr min-content;
   width: 320px;
-  padding-top: 285px;
+  padding-top: 307px;
 
   &::before {
     position: absolute;
     content: "";
     width: 311px;
     height: 232px;
-    top: 30px;
-    left: 0;
-    background-image: url("../img/before.png");
+    top: 44px;
+    left: -18px;
+    background-image: url("../img/before-mobile@1x.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+      background-size: 311px auto;
+    }
 
     @media (min-width: $tablet-width) {
       width: 354px;
       height: 620px;
-      background-image: url("../img/before-desktop.png");
+      top: 24px;
+      left: 0;
+      background-image: url("../img/before-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/before-tablet@2x.png");
+        background-size: 354px 620px;
+      }
     }
 
     @media (min-width: $desktop-width) {
-      left: -100px;
+      left: -68px;
+      top: 0;
+      background-image: url("../img/before-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/before-desktop@2x.png");
+        background-size: 405px 536px;
+      }
     }
   }
 
@@ -236,25 +266,38 @@
       height: 620px;
       top: 30px;
       left: 354px;
-      background-image: url("../img/after-desktop.png");
+      background-image: url("../img/after-tablet@1x.png");
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/after-tablet@2x.png");
+        background-size: 354px 607px;
+      }
     }
 
     @media (min-width: $desktop-width) {
-      left: 250px;
+      left: 286px;
+      top: 2px;
+      background-image: url("../img/after-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/after-desktop@2x.png");
+        background-size: 325px 654px;
+      }
     }
   }
 
   @media (min-width: $tablet-width) {
     width: 708px;
-    padding-top: 580px;
+    padding-top: 576px;
+    padding-bottom: 14px;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / -1;
     margin-left: 212px;
-    padding-top: 656px;
+    padding-top: 556px;
   }
 }
 
@@ -281,6 +324,11 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 2px;
   }
 }
 
@@ -290,6 +338,10 @@
 }
 
 .example__slider-legend--max {
-  padding-left: 13px;
+  padding-left: 8px;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+  }
 }
